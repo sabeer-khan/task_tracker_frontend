@@ -32,6 +32,24 @@ This is the React-based frontend for the Task Tracker full-stack app. It allows 
 git clone https://github.com/yourusername/task-tracker-frontend.git
 cd task-tracker-frontend
 
+2. Install dependencies
+
+pip install -r requirements.txt
+
+3. Configure .env
+
+DATABASE_URL=postgresql://postgres:password@localhost:5432/task_db
+
+4. Initialize the database
+
+python -c "from app.db.init_db import init_db; init_db()"
+
+5. Run the app
+
+uvicorn app.main:app --reload
+
+Access the docs: http://localhost:8000/docs
+
 ## 🔗 Related Project
 
 - [Frontend (React)](https://github.com/yourusername/task-tracker-frontend)
